@@ -1,11 +1,12 @@
 * {
-  color: green;
+  color: #333; /* Darker text for better contrast */
   font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
   margin: 0;
   padding: 0;
+  background-color: #b3e7f3; /* A very light background to complement the teal */
 }
 
 .app {
@@ -13,7 +14,8 @@ body {
 }
 
 .sidebar {
-  background-color: #333;
+  background-color: #80d0c7; /* Your chosen color for the sidebar */
+  color: #ffffff; /* White text for contrast */
   width: 250px;
   height: 100vh;
   display: flex;
@@ -24,9 +26,10 @@ body {
   left: 0;
 }
 
-.button {
-  border: solid 0.5px green;
+.button, .button:hover {
+  border: solid 0.5px #ffffff; /* Lighter border for buttons */
   background-color: transparent;
+  color: #ffffff; /* Ensure text is visible on the buttons */
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
@@ -35,23 +38,25 @@ body {
 }
 
 .button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly darker on hover */
 }
 
-.nav {
-  border: solid 0.5px rgba(255, 255, 255, 0.05);
+.nav, .history li {
+  border: solid 0.5px rgba(255, 255, 255, 0.1); /* Lighter borders for elements */
   padding: 10px;
   margin: 10px;
 }
 
 .main {
-  height:100vh;
-  width:100%;
+  margin-left: 250px; /* Offset the main content */
+  height: 100vh;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
   text-align: center;
+  background-color: #ffffff; /* Main content background */
 }
 
 .history {
@@ -60,14 +65,8 @@ body {
   overflow-y: auto;
 }
 
-.history li {
-  list-style-type: none;
-  padding: 15px 0;
-  cursor: pointer;
-}
-
-.info{
-  color:rgba(255, 255, 255, 0.05);
+.info {
+  color: #80d0c7; /* Use your teal for info text for a cohesive look */
   font-size: 11px;
   padding: 10px;
 }
@@ -75,64 +74,64 @@ body {
 .input-container {
   position: relative;
   width: 100%;
-  max-width: 650px;
+  max-width: 750px;
 }
 
-.bottom-section{
-  width:100%;
+.bottom-section {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-input{
-  width:100%;
+input {
+  width: 100%;
   font-size: 20px;
-  border:none;
-  background-color: rgba(255, 255, 255, 0.05);
-  padding:12px 15px;
+  border: none;
+  background-color: #e6fff8; /* A very light teal background for input */
+  padding: 12px 15px;
   border-radius: 5px;
-  box-shadow: rgba(0,0,0,0.05) 0 52px 55px,
-  rgba(0,0,0,0.1) 0 -12px 30px,
-  rgba(0,0,0,0.1) 0 4px 6px,
-  rgba(0,0,0,0.1) 0 12px 3px,
-  rgba(0,0,0,0.1) 0 -3px 5px;
-
+  box-shadow: rgba(0, 0, 0, 0.05) 0 52px 55px,
+              rgba(0, 0, 0, 0.1) 0 -12px 30px,
+              rgba(0, 0, 0, 0.1) 0 4px 6px,
+              rgba(0, 0, 0, 0.1) 0 12px 3px,
+              rgba(0, 0, 0, 0.1) 0 -3px 5px;
 }
 
-input:focus{
-  outline:none;
+input:focus {
+  outline: none;
 }
 
-#submit{
-  position:absolute;
-  bottom:15px;
-  right:0;
-  cursor:pointer;
+#submit {
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+  cursor: pointer;
 }
 
-.feed{
-  overflow:scroll;
-  width:100%;
-  padding:0;
+.feed {
+  overflow: scroll;
+  width: 100%;
+  padding: 0;
 }
 
-.feed li{
-  display:flex;
-  background-color: 444654;
-  padding:20px;
-  margin:20px 0;
-  width:100%;
+.feed li {
+  display: flex;
+  background-color: #5dbcb1; /* A neutral color for chat bubbles */
+  padding: 20px;
+  margin: 20px 0;
+  width: 100%;
+  border-radius: 50px;
 }
 
-.feed p{
-  color:rgba(255,255,255,0.8);
+.feed p {
+  color: rgba(255, 255, 255, 0.8); /* Light text for readability */
   font-size: 14px;
   text-align: left;
 }
 
-
-.feed p.role{
-  min-width:100px;
+.feed p.role {
+  min-width: 100px;
 }
+
